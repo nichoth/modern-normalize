@@ -1,5 +1,5 @@
 {
-	"name": "modern-normalize",
+	"name": "@nichoth/modern-normalize",
 	"version": "1.1.0",
 	"description": "Normalize browsers' default style",
 	"license": "MIT",
@@ -22,7 +22,8 @@
 		"test:chrome": "testcafe chrome:headless test/acceptance/chrome --app \"http-server . --silent\"",
 		"test:firefox": "testcafe firefox:headless test/acceptance/firefox --app \"http-server . --silent\"",
 		"test:safari": "testcafe safari test/acceptance/safari --app \"http-server . --silent\"",
-		"version": "replace-in-files --regex='v\\d+\\.\\d+\\.\\d+' --replacement=v$npm_package_version modern-normalize.css && git add ."
+		"version": "replace-in-files --regex='v\\d+\\.\\d+\\.\\d+' --replacement=v$npm_package_version modern-normalize.css && git add .",
+		"postversion": "git push --follow-tags && npm publish"
 	},
 	"files": [
 		"modern-normalize.css"
